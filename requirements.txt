@@ -1,0 +1,5 @@
+## Lightweight dependencies for the current Phase 0–2 pipeline.
+## Install with: python -m pip install -r requirements.txt
+biopython==1.88
+requests==2.34.2
+pandas==3.0.6

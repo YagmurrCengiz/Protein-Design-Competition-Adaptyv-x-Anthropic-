@@ -1,0 +1,38 @@
+# Local Python environment (the project currently uses Python 3.11)
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local environment variables and editor/OS metadata
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+logs/*
+!logs/.gitkeep
+*.tmp
+*.log
+
+# Future large structural/model artifacts. Keep the directory layout tracked.
+data/structures/*
+!data/structures/.gitkeep
+predictions/*
+!predictions/.gitkeep
+
+# Generated design and result outputs can be recreated; preserve directory markers.
+designs/generated/*
+!designs/generated/.gitkeep
+designs/filtered/*
+!designs/filtered/.gitkeep
+designs/final/*
+!designs/final/.gitkeep
+results/*
+!results/.gitkeep
