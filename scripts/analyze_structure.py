@@ -249,6 +249,12 @@ print("=" * 90)
 print("ALPHAFOLD STRUCTURE")
 print("=" * 90)
 
+if not os.path.exists(alphafold_path):
+
+    raise FileNotFoundError(
+        f"AlphaFold structure not found: {alphafold_path}"
+    )
+
 af_structure = parser.get_structure(
     "EGFR_AlphaFold",
     alphafold_path
