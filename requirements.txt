@@ -3,3 +3,6 @@
 biopython==1.88
 requests==2.34.2
 pandas==3.0.6
+# PyMOL Open-Source Python package used by the optional structure-modeling workflow.
+# Pinned PyPI release is a pre-release; official conda alternative: pymol-bundle.
+pymol-open-source==3.2.0a0

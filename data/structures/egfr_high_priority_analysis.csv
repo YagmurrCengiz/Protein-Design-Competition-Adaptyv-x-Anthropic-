@@ -1,0 +1,5 @@
+position,human,mouse,mutation_type,1IVO_exposure,AlphaFold_exposure,1IVO_SASA,AlphaFold_SASA,SASA_difference,AlphaFold_pLDDT,neighbor_count,closest_neighbor,charged_neighbors,polar_neighbors,hydrophobic_neighbors,special_neighbors,chemical_contacts,mean_neighbor_distance,minimum_neighbor_distance,neighbor_residue_summary,impact_score
+364,S,A,POLAR_TO_HYDROPHOBIC,PARTIALLY EXPOSED,BURIED,20.38,7.77,-12.61,93.56,11.0,1.33,4.0,3.0,2.0,2.0,7.0,3.35,1.33,"THR:2, CYS:2, LYS:2, ILE:1, GLU:1, VAL:1, SER:1, ARG:1",12
+255,R,Q,LOSS_OF_CHARGE,EXPOSED,EXPOSED,80.16,69.74,-10.420000000000002,93.38,14.0,1.33,6.0,2.0,3.0,3.0,8.0,3.44,1.33,"CYS:3, GLU:3, THR:2, LYS:2, ASP:1, PHE:1, ALA:1, LEU:1",10
+414,R,W,LOSS_OF_CHARGE,EXPOSED,EXPOSED,151.99,63.34,-88.65,93.69,11.0,1.33,4.0,3.0,2.0,2.0,7.0,2.97,1.33,"ASP:2, PRO:2, THR:1, ASN:1, HIS:1, GLU:1, TRP:1, ILE:1, GLN:1",10
+126,D,G,LOSS_OF_CHARGE,PARTIALLY EXPOSED,PARTIALLY EXPOSED,33.35,30.05,-3.3000000000000007,90.38,9.0,1.33,2.0,5.0,1.0,1.0,7.0,2.99,1.33,"THR:2, ASN:2, TYR:1, ALA:1, ARG:1, LYS:1, GLY:1",9

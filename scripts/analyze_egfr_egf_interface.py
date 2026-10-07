@@ -1,200 +1,308 @@
-from Bio.PDB import PDBParser
 import pandas as pd
 import os
 
-PDB_PATH = "data/structures/1IVO.pdb"
-OUTPUT_PATH = "data/structures/egfr_egf_interface.csv"
+INPUT_PATH = "data/structures/egfr_egf_interface.csv"
+OUTPUT_PATH = "data/structures/egfr_egf_interface_interactions.csv"
 
 CONTACT_DISTANCE = 5.0
+SALT_BRIDGE_DISTANCE = 4.0
 
-parser = PDBParser(QUIET=True)
+charged_positive = {
+    "LYS",
+    "ARG",
+    "HIS"
+}
 
-structure = parser.get_structure(
-    "EGFR_EGF",
-    PDB_PATH
-)
+charged_negative = {
+    "ASP",
+    "GLU"
+}
 
-model = structure[0]
+polar_residues = {
+    "SER",
+    "THR",
+    "ASN",
+    "GLN",
+    "TYR",
+    "HIS",
+    "CYS"
+}
 
-egfr_chain = model["A"]
+hydrophobic_residues = {
+    "ALA",
+    "VAL",
+    "ILE",
+    "LEU",
+    "MET",
+    "PHE",
+    "TRP",
+    "PRO"
+}
 
-egf_chains = []
+aromatic_residues = {
+    "PHE",
+    "TYR",
+    "TRP",
+    "HIS"
+}
 
-for chain_id in ["C", "D"]:
 
-    if chain_id in model:
+def classify_residue(residue):
 
-        egf_chains.append(
-            model[chain_id]
-        )
+    if residue in charged_positive:
+        return "POSITIVE"
 
-print("=" * 90)
-print("EGFR-EGF INTERFACE ANALYSIS")
-print("=" * 90)
+    if residue in charged_negative:
+        return "NEGATIVE"
 
-print()
+    if residue in polar_residues:
+        return "POLAR"
 
-print(
-    "EGFR chain:",
-    egfr_chain.id
-)
+    if residue in hydrophobic_residues:
+        return "HYDROPHOBIC"
 
-print(
-    "EGF chains:",
-    [chain.id for chain in egf_chains]
-)
+    return "OTHER"
 
-egfr_residues = []
 
-for residue in egfr_chain:
+def classify_interaction(
+    egfr_residue,
+    egf_residue,
+    distance
+):
 
-    hetflag, resseq, icode = residue.id
+    egfr_class = classify_residue(
+        egfr_residue
+    )
 
-    if hetflag == " ":
+    egf_class = classify_residue(
+        egf_residue
+    )
 
-        egfr_residues.append(
-            residue
-        )
-
-egf_residues = []
-
-for chain in egf_chains:
-
-    for residue in chain:
-
-        hetflag, resseq, icode = residue.id
-
-        if hetflag == " ":
-
-            egf_residues.append(
-                (
-                    chain.id,
-                    residue
-                )
+    if (
+        distance <= SALT_BRIDGE_DISTANCE
+        and (
+            (
+                egfr_class == "POSITIVE"
+                and egf_class == "NEGATIVE"
             )
+            or
+            (
+                egfr_class == "NEGATIVE"
+                and egf_class == "POSITIVE"
+            )
+        )
+    ):
+
+        return (
+            "POSSIBLE_SALT_BRIDGE",
+            "HIGH"
+        )
+
+    if (
+        egfr_residue in aromatic_residues
+        and egf_residue in aromatic_residues
+        and distance <= 5.0
+    ):
+
+        return (
+            "AROMATIC_CONTACT",
+            "MEDIUM"
+        )
+
+    if (
+        egfr_class == "HYDROPHOBIC"
+        and egf_class == "HYDROPHOBIC"
+        and distance <= 4.0
+    ):
+
+        return (
+            "HYDROPHOBIC_CONTACT",
+            "MEDIUM"
+        )
+
+    if (
+        (
+            egfr_class in {
+                "POSITIVE",
+                "NEGATIVE"
+            }
+            and egf_class in {
+                "POSITIVE",
+                "NEGATIVE"
+            }
+        )
+        and distance <= 5.0
+    ):
+
+        return (
+            "CHARGED_CONTACT",
+            "MEDIUM"
+        )
+
+    if (
+        (
+            egfr_class == "POLAR"
+            or egf_class == "POLAR"
+        )
+        and distance <= 4.0
+    ):
+
+        return (
+            "POLAR_CONTACT",
+            "MEDIUM"
+        )
+
+    if (
+        (
+            egfr_class in {
+                "POLAR",
+                "POSITIVE",
+                "NEGATIVE"
+            }
+            or
+            egf_class in {
+                "POLAR",
+                "POSITIVE",
+                "NEGATIVE"
+            }
+        )
+        and distance <= 3.5
+    ):
+
+        return (
+            "POLAR_CONTACT",
+            "LOW"
+        )
+
+    return (
+        "OTHER",
+        "LOW"
+    )
+
+
+df = pd.read_csv(
+    INPUT_PATH
+)
+
+print("=" * 90)
+print("EGFR-EGF INTERACTION CLASSIFICATION")
+print("=" * 90)
 
 print()
 print(
-    "EGFR standard residues:",
-    len(egfr_residues)
+    "Interface contacts:",
+    len(df)
 )
-
-print(
-    "EGF standard residues:",
-    len(egf_residues)
-)
-
-print()
-print("=" * 90)
-print("SEARCHING FOR INTERFACE CONTACTS")
-print("=" * 90)
 
 results = []
 
-for egfr_residue in egfr_residues:
+for _, row in df.iterrows():
 
-    best_distance = float("inf")
+    egfr_residue = row["EGFR_residue"]
+    egf_residue = row["EGF_residue"]
+    distance = float(
+        row["minimum_distance"]
+    )
 
-    best_egf_chain = None
-    best_egf_residue = None
-    best_egfr_atom = None
-    best_egf_atom = None
+    egfr_class = classify_residue(
+        egfr_residue
+    )
 
-    for egf_chain_id, egf_residue in egf_residues:
+    egf_class = classify_residue(
+        egf_residue
+    )
 
-        for egfr_atom in egfr_residue.get_atoms():
+    interaction_type, confidence = (
+        classify_interaction(
+            egfr_residue,
+            egf_residue,
+            distance
+        )
+    )
 
-            for egf_atom in egf_residue.get_atoms():
+    result = row.to_dict()
 
-                distance = egfr_atom - egf_atom
+    result["EGFR_class"] = egfr_class
+    result["EGF_class"] = egf_class
+    result["interaction_type"] = interaction_type
+    result["interaction_confidence"] = confidence
 
-                if distance < best_distance:
+    results.append(result)
 
-                    best_distance = distance
-
-                    best_egf_chain = egf_chain_id
-
-                    best_egf_residue = egf_residue
-
-                    best_egfr_atom = egfr_atom
-
-                    best_egf_atom = egf_atom
-
-    if best_distance <= CONTACT_DISTANCE:
-
-        results.append({
-
-            "EGFR_position":
-                egfr_residue.id[1],
-
-            "EGFR_residue":
-                egfr_residue.get_resname(),
-
-            "EGF_chain":
-                best_egf_chain,
-
-            "EGF_position":
-                best_egf_residue.id[1],
-
-            "EGF_residue":
-                best_egf_residue.get_resname(),
-
-            "minimum_distance":
-                round(
-                    best_distance,
-                    2
-                ),
-
-            "EGFR_atom":
-                best_egfr_atom.get_name(),
-
-            "EGF_atom":
-                best_egf_atom.get_name()
-
-        })
-
-print()
-print(
-    "Interface residue pairs:",
-    len(results)
+result_df = pd.DataFrame(
+    results
 )
 
-df = pd.DataFrame(results)
-
-if not df.empty:
-
-    df = df.sort_values(
-        by="minimum_distance"
-    )
+result_df = result_df.sort_values(
+    by="minimum_distance"
+)
 
 print()
 print("=" * 90)
-print("EGFR-EGF INTERFACE SUMMARY")
+print("INTERACTION SUMMARY")
 print("=" * 90)
 
-if not df.empty:
+print()
+
+print(
+    result_df[
+        [
+            "EGFR_position",
+            "EGFR_residue",
+            "EGF_chain",
+            "EGF_position",
+            "EGF_residue",
+            "minimum_distance",
+            "EGFR_class",
+            "EGF_class",
+            "interaction_type",
+            "interaction_confidence"
+        ]
+    ].to_string(
+        index=False
+    )
+)
+
+print()
+print("=" * 90)
+print("INTERACTION COUNTS")
+print("=" * 90)
+
+print()
+
+print(
+    result_df[
+        "interaction_type"
+    ].value_counts().to_string()
+)
+
+print()
+print("=" * 90)
+print("HIGH-CONFIDENCE INTERACTIONS")
+print("=" * 90)
+
+high_confidence = result_df[
+    result_df[
+        "interaction_confidence"
+    ] == "HIGH"
+]
+
+if len(high_confidence) > 0:
 
     print()
 
     print(
-        "Unique EGFR interface residues:",
-        df["EGFR_position"].nunique()
-    )
-
-    print(
-        "Unique EGF interface residues:",
-        df[
+        high_confidence[
             [
+                "EGFR_position",
+                "EGFR_residue",
                 "EGF_chain",
-                "EGF_position"
+                "EGF_position",
+                "EGF_residue",
+                "minimum_distance",
+                "interaction_type"
             ]
-        ].drop_duplicates().shape[0]
-    )
-
-    print()
-
-    print(
-        df.to_string(
+        ].to_string(
             index=False
         )
     )
@@ -203,7 +311,7 @@ else:
 
     print()
     print(
-        "No EGFR-EGF interface contacts detected."
+        "No high-confidence interactions detected."
     )
 
 os.makedirs(
@@ -211,17 +319,22 @@ os.makedirs(
     exist_ok=True
 )
 
-df.to_csv(
+result_df.to_csv(
     OUTPUT_PATH,
     index=False
 )
 
 print()
 print("=" * 90)
-print("EGFR-EGF INTERFACE ANALYSIS SAVED")
+print("INTERACTION ANALYSIS SAVED")
 print("=" * 90)
 
 print(
     "Output:",
     OUTPUT_PATH
+)
+
+print(
+    "Interactions:",
+    len(result_df)
 )

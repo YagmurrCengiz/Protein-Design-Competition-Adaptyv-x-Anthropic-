@@ -1,0 +1,11 @@
+position,human,mouse,mutation_type,EGFR_residue,EGF_chain,EGF_position,EGF_residue,interface_distance,EGFR_atom,EGF_atom,direct_interface_match
+412,E,D,OTHER,PHE,C,48,LYS,3.32,CE1,CB,True
+348,S,T,OTHER,LEU,C,43,GLN,4.01,CD2,O,True
+467,K,R,OTHER,ILE,C,51,GLU,4.38,CD1,N,True
+414,R,W,LOSS_OF_CHARGE,,C,47,LEU,3.44,,CD1,False
+377,R,K,OTHER,,C,44,TYR,3.69,,CD2,False
+383,H,R,GAIN_OF_CHARGE,,C,44,TYR,3.69,,CD2,False
+323,V,I,OTHER,,C,43,GLN,3.8,,CB,False
+330,E,D,OTHER,,C,43,GLN,3.8,,CB,False
+361,N,Y,POLAR_TO_HYDROPHOBIC,,C,41,ARG,3.88,,NH1,False
+442,S,G,OTHER,,C,51,GLU,4.42,,O,False

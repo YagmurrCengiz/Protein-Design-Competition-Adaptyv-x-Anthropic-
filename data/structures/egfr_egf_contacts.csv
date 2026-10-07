@@ -1,0 +1,5 @@
+position,human,mouse,mutation_type,PDB_position,PDB_residue,EGF_contact,EGF_min_distance,EGF_chain,EGF_residue_number,EGF_residue,EGF_atom,EGFR_atom
+364,S,A,POLAR_TO_HYDROPHOBIC,340,SER,False,18.27,C,44,TYR,OH,C
+255,R,Q,LOSS_OF_CHARGE,231,ARG,False,18.73,C,48,LYS,NZ,NH2
+414,R,W,LOSS_OF_CHARGE,390,ARG,False,17.18,C,16,HIS,CE1,O
+126,D,G,LOSS_OF_CHARGE,102,ASP,False,8.99,C,25,ALA,CB,O

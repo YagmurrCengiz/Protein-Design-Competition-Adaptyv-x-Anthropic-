@@ -1,0 +1,77 @@
+position,human,mouse,1IVO_PDB_number,1IVO_PDB_residue,1IVO_SASA,1IVO_exposure,AlphaFold_PDB_number,AlphaFold_PDB_residue,AlphaFold_SASA,AlphaFold_exposure,AlphaFold_pLDDT,human_charge,mouse_charge,charge_change,human_polarity,mouse_polarity,polarity_change,human_hydrophobicity,mouse_hydrophobicity,hydrophobicity_change,size_change,SASA_difference,exposure_change
+37,K,R,13.0,LYS,20.14,PARTIALLY EXPOSED,37,LYS,113.74,EXPOSED,88.38,positive,positive,positive → positive,polar,polar,polar → polar,-3.9,-4.5,-0.6,large → large,93.6,PARTIALLY EXPOSED → EXPOSED
+55,F,Y,31.0,PHE,0.0,BURIED,55,PHE,1.21,BURIED,94.38,neutral,neutral,neutral → neutral,nonpolar,polar,nonpolar → polar,2.8,-1.3,-4.1,large → large,1.21,NO CHANGE
+111,M,A,87.0,MET,96.02,EXPOSED,111,MET,45.87,EXPOSED,84.5,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,1.9,1.8,-0.1,large → small,-50.15,NO CHANGE
+112,Y,L,88.0,TYR,48.72,EXPOSED,112,TYR,75.71,EXPOSED,93.25,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-1.3,3.8,5.1,large → medium,26.99,NO CHANGE
+116,S,T,92.0,SER,2.17,BURIED,116,SER,41.67,EXPOSED,93.31,neutral,neutral,neutral → neutral,polar,polar,polar → polar,-0.8,-0.7,0.1,small → medium,39.5,BURIED → EXPOSED
+121,V,I,97.0,VAL,0.0,BURIED,121,VAL,0.0,BURIED,97.81,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,4.2,4.5,0.3,medium → medium,0.0,NO CHANGE
+126,D,G,102.0,ASP,33.35,PARTIALLY EXPOSED,126,ASP,30.05,PARTIALLY EXPOSED,90.38,negative,neutral,negative → neutral,polar,nonpolar,polar → nonpolar,-3.5,-0.4,3.1,medium → small,-3.3,NO CHANGE
+127,A,T,103.0,ALA,105.24,EXPOSED,127,ALA,103.78,EXPOSED,89.69,neutral,neutral,neutral → neutral,nonpolar,polar,nonpolar → polar,1.8,-0.7,-2.5,small → medium,-1.46,NO CHANGE
+129,K,R,105.0,LYS,91.05,EXPOSED,129,LYS,89.75,EXPOSED,88.25,positive,positive,positive → positive,polar,polar,polar → polar,-3.9,-4.5,-0.6,large → large,-1.3,NO CHANGE
+133,K,R,109.0,LYS,49.69,EXPOSED,133,LYS,43.27,EXPOSED,93.56,positive,positive,positive → positive,polar,polar,polar → polar,-3.9,-4.5,-0.6,large → large,-6.42,NO CHANGE
+145,H,I,121.0,HIS,94.92,EXPOSED,145,HIS,78.81,EXPOSED,95.25,positive/neutral,neutral,positive/neutral → neutral,polar,nonpolar,polar → nonpolar,-3.2,4.5,7.7,medium → medium,-16.11,NO CHANGE
+155,A,I,131.0,ALA,6.04,BURIED,155,ALA,2.42,BURIED,92.38,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,1.8,4.5,2.7,small → medium,-3.62,NO CHANGE
+159,V,M,135.0,VAL,0.0,BURIED,159,VAL,0.0,BURIED,94.19,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,4.2,1.9,-2.3,medium → large,0.0,NO CHANGE
+160,E,D,136.0,GLU,91.94,EXPOSED,160,GLU,85.91,EXPOSED,91.81,negative,negative,negative → negative,polar,polar,polar → polar,-3.5,-3.5,0.0,medium → medium,-6.03,NO CHANGE
+161,S,T,137.0,SER,21.72,PARTIALLY EXPOSED,161,SER,31.24,PARTIALLY EXPOSED,94.19,neutral,neutral,neutral → neutral,polar,polar,polar → polar,-0.8,-0.7,0.1,small → medium,9.52,NO CHANGE
+169,S,Q,145.0,SER,34.97,PARTIALLY EXPOSED,169,SER,25.19,PARTIALLY EXPOSED,90.81,neutral,neutral,neutral → neutral,polar,polar,polar → polar,-0.8,-3.5,-2.7,small → medium,-9.78,NO CHANGE
+170,S,N,146.0,SER,74.96,EXPOSED,170,SER,78.2,EXPOSED,89.75,neutral,neutral,neutral → neutral,polar,polar,polar → polar,-0.8,-3.5,-2.7,small → medium,3.24,NO CHANGE
+171,D,V,147.0,ASP,117.49,EXPOSED,171,ASP,102.25,EXPOSED,89.94,negative,neutral,negative → neutral,polar,nonpolar,polar → nonpolar,-3.5,4.2,7.7,medium → medium,-15.24,NO CHANGE
+173,L,M,149.0,LEU,60.6,EXPOSED,173,LEU,57.0,EXPOSED,90.38,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,3.8,1.9,-1.9,medium → large,-3.6,NO CHANGE
+180,F,L,156.0,PHE,61.88,EXPOSED,180,PHE,67.23,EXPOSED,80.19,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,2.8,3.8,1.0,large → medium,5.35,NO CHANGE
+182,N,S,158.0,ASN,151.03,EXPOSED,182,ASN,76.09,EXPOSED,64.62,neutral,neutral,neutral → neutral,polar,polar,polar → polar,-3.5,-0.8,2.7,medium → small,-74.94,NO CHANGE
+184,L,P,160.0,LEU,160.2,EXPOSED,184,LEU,68.56,EXPOSED,60.78,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,3.8,-1.6,-5.4,medium → medium,-91.64,NO CHANGE
+185,G,S,161.0,GLY,41.59,EXPOSED,185,GLY,96.9,EXPOSED,62.22,neutral,neutral,neutral → neutral,nonpolar,polar,nonpolar → polar,-0.4,-0.8,-0.4,small → small,55.31,NO CHANGE
+188,Q,P,164.0,GLN,115.13,EXPOSED,188,GLN,121.34,EXPOSED,90.31,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-3.5,-1.6,1.9,medium → medium,6.21,NO CHANGE
+202,A,G,178.0,ALA,23.67,PARTIALLY EXPOSED,202,ALA,40.79,EXPOSED,92.62,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,1.8,-0.4,-2.2,small → small,17.12,PARTIALLY EXPOSED → EXPOSED
+221,G,H,197.0,GLY,25.61,PARTIALLY EXPOSED,221,GLY,37.33,PARTIALLY EXPOSED,92.0,neutral,positive/neutral,neutral → positive/neutral,nonpolar,polar,nonpolar → polar,-0.4,-3.2,-2.8,small → medium,11.72,NO CHANGE
+226,K,R,202.0,LYS,132.46,EXPOSED,226,LYS,151.82,EXPOSED,94.56,positive,positive,positive → positive,polar,polar,polar → polar,-3.9,-4.5,-0.6,large → large,19.36,NO CHANGE
+252,R,Q,228.0,ARG,83.55,EXPOSED,252,ARG,78.72,EXPOSED,94.62,positive,neutral,positive → neutral,polar,polar,polar → polar,-4.5,-3.5,1.0,large → medium,-4.83,NO CHANGE
+255,R,Q,231.0,ARG,80.16,EXPOSED,255,ARG,69.74,EXPOSED,93.38,positive,neutral,positive → neutral,polar,polar,polar → polar,-4.5,-3.5,1.0,large → medium,-10.42,NO CHANGE
+313,A,P,289.0,ALA,70.86,EXPOSED,313,ALA,103.82,EXPOSED,73.94,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,1.8,-1.6,-3.4,small → medium,32.96,NO CHANGE
+315,S,Y,291.0,SER,16.34,PARTIALLY EXPOSED,315,SER,21.43,PARTIALLY EXPOSED,82.38,neutral,neutral,neutral → neutral,polar,polar,polar → polar,-0.8,-1.3,-0.5,small → large,5.09,NO CHANGE
+318,M,V,294.0,MET,104.57,EXPOSED,318,MET,76.24,EXPOSED,84.88,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,1.9,4.2,2.3,large → medium,-28.33,NO CHANGE
+323,V,I,299.0,VAL,57.97,EXPOSED,323,VAL,49.51,EXPOSED,78.94,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,4.2,4.5,0.3,medium → medium,-8.46,NO CHANGE
+330,E,D,306.0,GLU,159.18,EXPOSED,330,GLU,174.89,EXPOSED,81.44,negative,negative,negative → negative,polar,polar,polar → polar,-3.5,-3.5,0.0,medium → medium,15.71,NO CHANGE
+348,S,T,324.0,SER,7.5,BURIED,348,SER,28.27,PARTIALLY EXPOSED,89.75,neutral,neutral,neutral → neutral,polar,polar,polar → polar,-0.8,-0.7,0.1,small → medium,20.77,BURIED → PARTIALLY EXPOSED
+361,N,Y,337.0,ASN,59.16,EXPOSED,361,ASN,83.49,EXPOSED,90.5,neutral,neutral,neutral → neutral,polar,polar,polar → polar,-3.5,-1.3,2.2,medium → large,24.33,NO CHANGE
+364,S,A,340.0,SER,20.38,PARTIALLY EXPOSED,364,SER,7.77,BURIED,93.56,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-0.8,1.8,2.6,small → small,-12.61,PARTIALLY EXPOSED → BURIED
+377,R,K,353.0,ARG,166.4,EXPOSED,377,ARG,181.36,EXPOSED,94.56,positive,positive,positive → positive,polar,polar,polar → polar,-4.5,-3.9,0.6,large → large,14.96,NO CHANGE
+383,H,R,359.0,HIS,148.91,EXPOSED,383,HIS,160.58,EXPOSED,93.0,positive/neutral,positive,positive/neutral → positive,polar,polar,polar → polar,-3.2,-4.5,-1.3,medium → large,11.67,NO CHANGE
+390,Q,R,366.0,GLN,132.91,EXPOSED,390,GLN,136.9,EXPOSED,94.62,neutral,positive,neutral → positive,polar,polar,polar → polar,-3.5,-4.5,-1.0,medium → large,3.99,NO CHANGE
+393,D,E,369.0,ASP,81.74,EXPOSED,393,ASP,59.92,EXPOSED,96.06,negative,negative,negative → negative,polar,polar,polar → polar,-3.5,-3.5,0.0,medium → medium,-21.82,NO CHANGE
+412,E,D,388.0,GLU,101.34,EXPOSED,412,GLU,127.83,EXPOSED,92.31,negative,negative,negative → negative,polar,polar,polar → polar,-3.5,-3.5,0.0,medium → medium,26.49,NO CHANGE
+414,R,W,390.0,ARG,151.99,EXPOSED,414,ARG,63.34,EXPOSED,93.69,positive,neutral,positive → neutral,polar,nonpolar,polar → nonpolar,-4.5,-0.9,3.6,large → large,-88.65,NO CHANGE
+442,S,G,418.0,SER,12.06,BURIED,442,SER,83.88,EXPOSED,94.19,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-0.8,-0.4,0.4,small → small,71.82,BURIED → EXPOSED
+467,K,R,443.0,LYS,101.76,EXPOSED,467,LYS,117.17,EXPOSED,94.19,positive,positive,positive → positive,polar,polar,polar → polar,-3.9,-4.5,-0.6,large → large,15.41,NO CHANGE
+484,S,P,460.0,SER,121.71,EXPOSED,484,SER,130.37,EXPOSED,77.0,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-0.8,-1.6,-0.8,small → medium,8.66,NO CHANGE
+485,G,N,461.0,GLY,54.05,EXPOSED,485,GLY,53.23,EXPOSED,81.12,neutral,neutral,neutral → neutral,nonpolar,polar,nonpolar → polar,-0.4,-3.5,-3.1,small → medium,-0.82,NO CHANGE
+491,I,M,467.0,ILE,73.67,EXPOSED,491,ILE,76.08,EXPOSED,92.56,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,4.5,1.9,-2.6,medium → large,2.41,NO CHANGE
+492,S,N,468.0,SER,59.96,EXPOSED,492,SER,87.59,EXPOSED,92.69,neutral,neutral,neutral → neutral,polar,polar,polar → polar,-0.8,-3.5,-2.7,small → medium,27.63,NO CHANGE
+495,G,A,471.0,GLY,20.19,PARTIALLY EXPOSED,495,GLY,43.88,EXPOSED,88.25,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,-0.4,1.8,2.2,small → small,23.69,PARTIALLY EXPOSED → EXPOSED
+497,N,K,473.0,ASN,118.11,EXPOSED,497,ASN,121.71,EXPOSED,91.38,neutral,positive,neutral → positive,polar,polar,polar → polar,-3.5,-3.9,-0.4,medium → large,3.6,NO CHANGE
+498,S,D,474.0,SER,61.38,EXPOSED,498,SER,50.76,EXPOSED,94.38,neutral,negative,neutral → negative,polar,polar,polar → polar,-0.8,-3.5,-2.7,small → medium,-10.62,NO CHANGE
+502,T,V,478.0,THR,72.0,EXPOSED,502,THR,75.36,EXPOSED,93.25,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-0.7,4.2,4.9,medium → medium,3.36,NO CHANGE
+503,G,N,479.0,GLY,54.29,EXPOSED,503,GLY,55.7,EXPOSED,93.12,neutral,neutral,neutral → neutral,nonpolar,polar,nonpolar → polar,-0.4,-3.5,-3.1,small → medium,1.41,NO CHANGE
+504,Q,H,480.0,GLN,34.73,PARTIALLY EXPOSED,504,GLN,49.79,EXPOSED,94.75,neutral,positive/neutral,neutral → positive/neutral,polar,polar,polar → polar,-3.5,-3.2,0.3,medium → medium,15.06,PARTIALLY EXPOSED → EXPOSED
+507,H,N,483.0,HIS,159.76,EXPOSED,507,HIS,65.69,EXPOSED,97.06,positive/neutral,neutral,positive/neutral → neutral,polar,polar,polar → polar,-3.2,-3.5,-0.3,medium → medium,-94.07,NO CHANGE
+508,A,P,484.0,ALA,99.68,EXPOSED,508,ALA,76.68,EXPOSED,96.69,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,1.8,-1.6,-3.4,small → medium,-23.0,NO CHANGE
+512,P,S,488.0,PRO,121.53,EXPOSED,512,PRO,136.29,EXPOSED,95.06,neutral,neutral,neutral → neutral,nonpolar,polar,nonpolar → polar,-1.6,-0.8,0.8,medium → small,14.76,NO CHANGE
+527,R,Q,503.0,ARG,168.26,EXPOSED,527,ARG,174.47,EXPOSED,93.94,positive,neutral,positive → neutral,polar,polar,polar → polar,-4.5,-3.5,1.0,large → medium,6.21,NO CHANGE
+537,D,E,,,,NOT MAPPED,537,ASP,90.58,EXPOSED,94.31,negative,negative,negative → negative,polar,polar,polar → polar,-3.5,-3.5,0.0,medium → medium,,NOT COMPARABLE
+541,L,I,,,,NOT MAPPED,541,LEU,56.76,EXPOSED,94.88,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,3.8,4.5,0.7,medium → medium,,NOT COMPARABLE
+599,V,I,,,,NOT MAPPED,599,VAL,49.51,EXPOSED,87.19,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,4.2,4.5,0.3,medium → medium,,NOT COMPARABLE
+614,G,N,,,,NOT MAPPED,614,GLY,49.32,EXPOSED,92.69,neutral,neutral,neutral → neutral,nonpolar,polar,nonpolar → polar,-0.4,-3.5,-3.1,small → medium,,NOT COMPARABLE
+615,H,N,,,,NOT MAPPED,615,HIS,91.34,EXPOSED,94.56,positive/neutral,neutral,positive/neutral → neutral,polar,polar,polar → polar,-3.2,-3.5,-0.3,medium → medium,,NOT COMPARABLE
+622,P,A,,,,NOT MAPPED,622,PRO,121.12,EXPOSED,87.25,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,-1.6,1.8,3.4,medium → small,,NOT COMPARABLE
+629,T,A,,,,NOT MAPPED,629,THR,119.99,EXPOSED,90.5,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-0.7,1.8,2.5,medium → small,,NOT COMPARABLE
+634,E,Q,,,,NOT MAPPED,634,GLU,176.22,EXPOSED,82.75,negative,neutral,negative → neutral,polar,polar,polar → polar,-3.5,-3.5,0.0,medium → medium,,NOT COMPARABLE
+637,P,E,,,,NOT MAPPED,637,PRO,107.06,EXPOSED,68.69,neutral,negative,neutral → negative,nonpolar,polar,nonpolar → polar,-1.6,-3.5,-1.9,medium → medium,,NOT COMPARABLE
+638,T,V,,,,NOT MAPPED,638,THR,122.59,EXPOSED,54.84,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-0.7,4.2,4.9,medium → medium,,NOT COMPARABLE
+639,N,W,,,,NOT MAPPED,639,ASN,144.78,EXPOSED,47.25,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-3.5,-0.9,2.6,medium → large,,NOT COMPARABLE
+640,G,P,,,,NOT MAPPED,640,GLY,49.32,EXPOSED,42.06,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,-0.4,-1.6,-1.2,small → medium,,NOT COMPARABLE
+641,P,S,,,,NOT MAPPED,641,PRO,133.33,EXPOSED,38.94,neutral,neutral,neutral → neutral,nonpolar,polar,nonpolar → polar,-1.6,-0.8,0.8,medium → small,,NOT COMPARABLE
+642,K,G,,,,NOT MAPPED,642,LYS,188.12,EXPOSED,32.31,positive,neutral,positive → neutral,polar,nonpolar,polar → nonpolar,-3.9,-0.4,3.5,large → small,,NOT COMPARABLE
+643,I,P,,,,NOT MAPPED,643,ILE,156.35,EXPOSED,37.66,neutral,neutral,neutral → neutral,nonpolar,nonpolar,nonpolar → nonpolar,4.5,-1.6,-6.1,medium → medium,,NOT COMPARABLE
+644,P,K,,,,NOT MAPPED,644,PRO,109.59,EXPOSED,35.25,neutral,positive,neutral → positive,nonpolar,polar,nonpolar → polar,-1.6,-3.9,-2.3,medium → large,,NOT COMPARABLE
+645,S,I,,,,NOT MAPPED,645,SER,112.94,EXPOSED,36.75,neutral,neutral,neutral → neutral,polar,nonpolar,polar → nonpolar,-0.8,4.5,5.3,small → medium,,NOT COMPARABLE
